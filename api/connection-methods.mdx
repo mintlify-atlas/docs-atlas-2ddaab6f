@@ -50,7 +50,7 @@ static connectWithPassword(
 #### Example
 
 ```typescript
-import SSHClient from 'react-native-ssh-sftp';
+import SSHClient from '@dylankenneally/react-native-ssh-sftp';
 
 try {
   const client = await SSHClient.connectWithPassword(
@@ -117,7 +117,7 @@ static connectWithKey(
 #### Example
 
 ```typescript
-import SSHClient from 'react-native-ssh-sftp';
+import SSHClient from '@dylankenneally/react-native-ssh-sftp';
 
 const privateKey = `-----BEGIN RSA PRIVATE KEY-----
 ...
@@ -188,7 +188,7 @@ static generateKeyPair(
 #### Example
 
 ```typescript
-import SSHClient from 'react-native-ssh-sftp';
+import SSHClient from '@dylankenneally/react-native-ssh-sftp';
 
 try {
   const keyPair = await SSHClient.generateKeyPair(
@@ -236,7 +236,7 @@ static getKeyDetails(
 #### Example
 
 ```typescript
-import SSHClient from 'react-native-ssh-sftp';
+import SSHClient from '@dylankenneally/react-native-ssh-sftp';
 
 const privateKey = `-----BEGIN RSA PRIVATE KEY-----
 ...

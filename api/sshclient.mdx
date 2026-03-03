@@ -119,7 +119,46 @@ type PasswordOrKey = string | KeyPair
 
 ## Instance Methods
 
-For documentation on instance methods (shell, SFTP, etc.), see:
+### Event Handling
+
+#### on()
+
+Registers an event handler for the specified event. This method is used to listen to asynchronous events from shell sessions and file transfers.
+
+```typescript
+on(eventName: string, handler: EventHandler): void
+```
+
+**Parameters:**
+
+- `eventName` (string) - The name of the event to listen for. Supported events:
+  - `'Shell'` - Receives output from interactive shell sessions
+  - `'UploadProgress'` - Receives progress updates during file uploads
+  - `'DownloadProgress'` - Receives progress updates during file downloads
+- `handler` (EventHandler) - The function to call when the event occurs
+
+**Usage Example:**
+
+```typescript
+// Listen for shell output
+client.on('Shell', (data) => {
+  console.log('Shell:', data);
+});
+
+// Listen for upload progress
+client.on('UploadProgress', (progress) => {
+  console.log('Upload progress:', progress);
+});
+
+// Listen for download progress
+client.on('DownloadProgress', (progress) => {
+  console.log('Download progress:', progress);
+});
+```
+
+### Other Instance Methods
+
+For documentation on other instance methods, see:
 
 - [SSH Operations](/api/ssh/execute) - Execute commands and manage interactive shells
 - [SFTP Operations](/api/sftp/connect) - File transfer and remote file system operations

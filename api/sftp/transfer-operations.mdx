@@ -40,7 +40,7 @@ sftpUpload(localFilePath: string, remoteFilePath: string, callback?: CallbackFun
 ### Example
 
 ```typescript
-import SSHClient from 'react-native-ssh-sftp';
+import SSHClient from '@dylankenneally/react-native-ssh-sftp';
 import { Platform } from 'react-native';
 
 // Using Promise
@@ -102,7 +102,7 @@ None
 ### Example
 
 ```typescript
-import SSHClient from 'react-native-ssh-sftp';
+import SSHClient from '@dylankenneally/react-native-ssh-sftp';
 
 // Start upload
 const uploadPromise = client.sftpUpload(
@@ -162,7 +162,7 @@ sftpDownload(remoteFilePath: string, localFilePath: string, callback?: CallbackF
 ### Example
 
 ```typescript
-import SSHClient from 'react-native-ssh-sftp';
+import SSHClient from '@dylankenneally/react-native-ssh-sftp';
 import RNFS from 'react-native-fs';
 
 // Using Promise
@@ -225,7 +225,7 @@ None
 ### Example
 
 ```typescript
-import SSHClient from 'react-native-ssh-sftp';
+import SSHClient from '@dylankenneally/react-native-ssh-sftp';
 
 // Start download
 const downloadPromise = client.sftpDownload(
@@ -283,7 +283,7 @@ client.on('DownloadProgress', (progress: {
 ### Complete Example with Progress Tracking
 
 ```typescript
-import SSHClient from 'react-native-ssh-sftp';
+import SSHClient from '@dylankenneally/react-native-ssh-sftp';
 import { useState } from 'react';
 
 function FileTransfer() {

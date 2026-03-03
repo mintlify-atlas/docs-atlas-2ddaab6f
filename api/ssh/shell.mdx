@@ -64,7 +64,7 @@ startShell(ptyType: PtyType, callback?: CallbackFunction<string>): Promise<strin
 ### Usage Example
 
 ```typescript
-import SSHClient, { PtyType } from 'react-native-ssh-sftp';
+import SSHClient, { PtyType } from '@dylankenneally/react-native-ssh-sftp';
 
 const client = await SSHClient.connectWithPassword(
   'example.com',
@@ -206,7 +206,7 @@ type EventHandler = (value: any) => void
 ### Usage Example
 
 ```typescript
-import SSHClient, { PtyType } from 'react-native-ssh-sftp';
+import SSHClient, { PtyType } from '@dylankenneally/react-native-ssh-sftp';
 
 const client = await SSHClient.connectWithPassword(
   'example.com',
@@ -282,7 +282,7 @@ enum PtyType {
 ### Usage Example
 
 ```typescript
-import { PtyType } from 'react-native-ssh-sftp';
+import { PtyType } from '@dylankenneally/react-native-ssh-sftp';
 
 // Use the recommended XTERM type
 await client.startShell(PtyType.XTERM);
